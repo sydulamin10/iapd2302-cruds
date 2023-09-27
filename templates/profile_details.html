@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% block title %} Create {% endblock %}
+{% block body %}
+<div class="container">
+    <div class="card" style="width: 25rem; margin-bottom:10px; margin-left:40%; ">
+        <img src="{{prof.image.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">name: {{prof.name}}</h5>
+            <p class="card-text">email : {{prof.email}}</div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"> phone number : {{prof.phone}}</li>
+            <li class="list-group-item">Gender: {{prof.gender}}</li>
+            <li class="list-group-item">date of birth : {{prof.deate_of_birth}}</li>
+        </ul>
+        <div class="card-body">
+            <p>
+                <button style="background-color:green;"><a href="{% url 'update_prof' prof.id %}">Update</a></button>
+            </p>
+            <p><a href="{% url 'delete' prof.id %}">
+                <button style="background-color: red;">Delete</button>
+            </a></p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+<br>
+<br>
