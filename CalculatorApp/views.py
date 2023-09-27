@@ -89,3 +89,7 @@ def update_prof(request, id):
 
 def new (request):
     pass
+
+def new2(request):
+    pass
+
