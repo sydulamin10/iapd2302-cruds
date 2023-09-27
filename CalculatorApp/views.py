@@ -85,3 +85,7 @@ def update_prof(request, id):
             messages.success(request, "Got an error")
 
     return render (request,'update.html', locals())
+
+
+def new (request):
+    pass
